@@ -1,0 +1,132 @@
+/* Arrière-plan clair type “grid” animé subtilement */
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    background:
+        /* voile doux */
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(250, 252, 255, .9)),
+        /* grille fine */
+        repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, .03) 0,
+            rgba(0, 0, 0, .03) 1px,
+            transparent 1px,
+            transparent 24px),
+        repeating-linear-gradient(90deg,
+            rgba(0, 0, 0, .03) 0,
+            rgba(0, 0, 0, .03) 1px,
+            transparent 1px,
+            transparent 24px);
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    animation: drift 30s linear infinite;
+    color: #111;
+}
+
+@keyframes drift {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 0 0, 0 20px, 20px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
+}
+
+
+
+h1,
+h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: brown;
+    text-transform: uppercase;
+}
+
+
+p {
+    font-style: italic;
+    text-align: center;
+}
+
+#par1 {
+
+    color: rgb(255, 115, 0);
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+#par2 {
+
+    color: rgb(255, 249, 245);
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:xx-large;
+
+}
+
+.classe_bg_color {
+    background-color: darksalmon;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1vw;
+    color: antiquewhite;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.classe_bg_color2 {
+    background-color: rgb(0, 0, 0);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1vw;
+    color: antiquewhite;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.saumon_central {
+text-align: center;
+}
+
+.saumon_manif {
+text-align: center;
+padding-left: 50px;
+padding-right: 10px;
+}
+
+.logo {
+text-align: center;
+
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("img/manifestation.png");
+border-radius: 10px;
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
